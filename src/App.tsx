@@ -429,6 +429,68 @@ const INSIGHTS_DATA: InsightItem[] = [
   },
 ];
 
+
+const services = [
+  {
+    num: "01",
+    title: "Experiential Marketing",
+    img: "/point1.png",
+    text: "Creating meaningful brand experiences that bring consumers closer to brands.",
+    points: [
+      "BTL & Consumer Activations",
+      "Consumer Engagement & Sampling",
+      "Mall & Retail Activations",
+      "Outdoor & On-ground Experiences",
+      "Fabricator & Channel Partner Meets",
+      "Brand Engagement Campaigns"
+    ]
+  },
+  {
+    num: "02",
+    title: "Rural & Regional Outreach",
+    img: "/point2.png",
+    text: "Taking brands beyond conventional media and connecting them with consumers at the grassroots.",
+    points: [
+      "Jatra-Based Brand Integration",
+      "Mobile Theatre Activations",
+      "Fairs & Melas Branding",
+      "Rural Consumer Engagement",
+      "Village-Level Brand Activation",
+      "Regional & Hyperlocal Campaigns"
+    ]
+  },
+  {
+    num: "03",
+    title: "Brand Solutions",
+    img: "/point3.png",
+    text: "Integrated brand communication solutions that amplify visibility, build relevance and create lasting impact.",
+    points: [
+      "Corporate Events & Conferences",
+      "Product Launches & Brand Experiences",
+      "Event Planning & Production",
+      "In-film Brand Integration",
+      "Branded Content & Entertainment",
+      "Sponsorships & Brand Partnerships",
+      "Outdoor Branding & Media Solutions"
+    ]
+  },
+  {
+    num: "04",
+    title: "Digital & Growth Marketing",
+    img: "/point4.png",
+    text: "Driving measurable business growth through digital strategy, creativity and performance-led marketing.",
+    points: [
+      "Search Engine Optimisation (SEO)",
+      "Search Engine Marketing (SEM)",
+      "App Store Optimisation (ASO)",
+      "Influencer & Creator Marketing",
+      "Website Design & Development",
+      "Performance Marketing & Lead Generation",
+      "Content & Social Media Marketing"
+    ]
+  }
+];
+
 const DIRECTORS = [
   {
     name: 'Sunando Chakraborty',
@@ -450,6 +512,7 @@ export default function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [activeBenefit, setActiveBenefit] = useState<number | null>(null);
+  const [activeService, setActiveService] = useState<number | null>(0);
 
   // Interactive in-page states (100% single page)
   const [showMoreAbout, setShowMoreAbout] = useState(false);
@@ -1745,88 +1808,30 @@ export default function App() {
          
 <section className="min-h-screen grid lg:grid-cols-12 bg-dark border-t border-white/5 overflow-hidden">
 
-  {/* Left Side: Statement */}
-  <div className="lg:col-span-4 p-12 md:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 bg-black relative z-10">
+  {/* LEFT SIDE */}
+  <div className="lg:col-span-4 p-8 sm:p-12 lg:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 bg-black relative z-10">
     <div className="gsap-reveal">
-      <h2 className="text-[10vw] lg:text-[6vw] font-bold leading-[0.9] tracking-tighter mb-8 italic uppercase">
+      <h2 className="text-[16vw] sm:text-[12vw] lg:text-[6vw] font-bold leading-[0.9] tracking-tighter mb-8 italic uppercase">
         What.<br />we.<br />do.
       </h2>
-      <div className="w-24 h-2 bg-gradient-to-r from-primary via-orange-500 to-purple-600 rounded-full mb-12" />
+
+      <div className="w-24 h-2 bg-gradient-to-r from-primary via-orange-500 to-purple-600 rounded-full mb-8 lg:mb-12" />
+
       <p className="text-white/40 text-lg max-w-sm leading-relaxed uppercase tracking-widest font-mono text-[10px]">
         Seamless integration of performance media, creative tech, and brand storytelling.
       </p>
     </div>
   </div>
 
-  {/* Right Side: Service Panels */}
-  <div className="lg:col-span-8 flex flex-col md:flex-row min-h-[800px] bg-black">
+  {/* DESKTOP: HORIZONTAL EXPANDING PANELS */}
+  <div className="hidden lg:flex lg:col-span-8 flex-row min-h-[800px] bg-black">
 
-    {[
-      {
-        num: "01",
-        title: "Experiential Marketing",
-        img: "/point1.png",
-        text: "Creating meaningful brand experiences that bring consumers closer to brands.",
-        points: [
-          "BTL & Consumer Activations",
-          "Consumer Engagement & Sampling",
-          "Mall & Retail Activations",
-          "Outdoor & On-ground Experiences",
-          "Fabricator & Channel Partner Meets",
-          "Brand Engagement Campaigns"
-        ]
-      },
-      {
-        num: "02",
-        title: "Rural & Regional Outreach",
-        img: "/point2.png",
-        text: "Taking brands beyond conventional media and connecting them with consumers at the grassroots.",
-        points: [
-          "Jatra-Based Brand Integration",
-          "Mobile Theatre Activations",
-          "Fairs & Melas Branding",
-          "Rural Consumer Engagement",
-          "Village-Level Brand Activation",
-          "Regional & Hyperlocal Campaigns"
-        ]
-      },
-      {
-        num: "03",
-        title: "Brand Solutions",
-        img: "/point3.png",
-        text: "Integrated brand communication solutions that amplify visibility, build relevance and create lasting impact.",
-        points: [
-          "Corporate Events & Conferences",
-          "Product Launches & Brand Experiences",
-          "Event Planning & Production",
-          "In-film Brand Integration",
-          "Branded Content & Entertainment",
-          "Sponsorships & Brand Partnerships",
-          "Outdoor Branding & Media Solutions"
-        ]
-      },
-      {
-        num: "04",
-        title: "Digital & Growth Marketing",
-        img: "/point4.png",
-        text: "Driving measurable business growth through digital strategy, creativity and performance-led marketing.",
-        points: [
-          "Search Engine Optimisation (SEO)",
-          "Search Engine Marketing (SEM)",
-          "App Store Optimisation (ASO)",
-          "Influencer & Creator Marketing",
-          "Website Design & Development",
-          "Performance Marketing & Lead Generation",
-          "Content & Social Media Marketing"
-        ]
-      }
-    ].map((panel, idx) => (
+    {services.map((panel, idx) => (
       <div
         key={idx}
-        className="service-panel flex-1 min-w-0 relative group overflow-hidden border-b md:border-b-0 md:border-r border-white/5 md:last:border-r-0 min-h-[600px] md:min-h-0 flex flex-col justify-end p-6 lg:p-8 transition-all duration-700 ease-in-out hover:flex-[2.8] focus-within:flex-[2.8]"
+        className="flex-1 min-w-0 relative group overflow-hidden border-r border-white/5 last:border-r-0 flex flex-col justify-end p-6 xl:p-8 transition-all duration-700 ease-in-out hover:flex-[2.8] focus-within:flex-[2.8]"
       >
-
-        {/* Background Image */}
+        {/* Background */}
         <div className="absolute inset-0 z-0">
           <img
             src={panel.img}
@@ -1836,8 +1841,7 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20 group-hover:via-black/80 transition-all duration-700" />
         </div>
 
-        {/* Default Content */}
-        <div className="relative z-10 transition-all duration-500">
+        <div className="relative z-10">
 
           <div className="flex items-center gap-3 mb-4 group-hover:translate-x-2 transition-transform">
             <div className="w-5 h-[1px] bg-primary flex-shrink-0" />
@@ -1846,46 +1850,132 @@ export default function App() {
             </span>
           </div>
 
-          <div className="text-[75px] lg:text-[100px] font-impact font-medium leading-none text-outline-thin text-transparent mb-6 group-hover:text-white transition-all duration-500">
+          <div className="text-[75px] xl:text-[100px] font-impact font-medium leading-none text-outline-thin text-transparent mb-6 group-hover:text-white transition-all duration-500">
             {panel.num}
           </div>
 
-          {/* Expanded Content */}
-          <div className="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[650px] group-hover:opacity-100 group-focus-within:max-h-[650px] group-focus-within:opacity-100 transition-all duration-700 ease-in-out">
-
+          {/* Hover Content */}
+          <div className="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[650px] group-hover:opacity-100 group-focus-within:max-h-[650px] group-focus-within:opacity-100 transition-all duration-700">
             <div className="h-[2px] w-12 bg-primary mb-5" />
 
-            <h3 className="text-white text-xl lg:text-2xl font-bold uppercase leading-tight mb-4">
+            <h3 className="text-white text-xl xl:text-2xl font-bold uppercase leading-tight mb-4">
               {panel.title}
             </h3>
 
-            <p className="text-white/70 text-xs leading-relaxed mb-6 max-w-sm">
+            <p className="text-white/70 text-xs leading-relaxed mb-6">
               {panel.text}
             </p>
 
             <ul className="space-y-3 pb-4">
               {panel.points.map((point, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-3 text-white/80 text-[10px] lg:text-xs uppercase tracking-wide leading-relaxed"
-                >
-                  <span className="text-primary mt-0.5 flex-shrink-0">•</span>
+                <li key={i} className="flex items-start gap-3 text-white/80 text-[10px] xl:text-xs uppercase tracking-wide leading-relaxed">
+                  <span className="text-primary flex-shrink-0">•</span>
                   <span>{point}</span>
                 </li>
               ))}
             </ul>
-
           </div>
 
-          {/* Hover Indicator */}
           <div className="h-[2px] w-0 group-hover:w-12 bg-primary transition-all duration-700 mt-4" />
-
         </div>
       </div>
     ))}
   </div>
-</section>
 
+  {/* MOBILE & TABLET: STACKED ACCORDION */}
+  <div className="lg:hidden flex flex-col gap-3 p-4 sm:p-8 bg-black">
+
+    {services.map((panel, idx) => {
+      const isOpen = activeService === idx;
+
+      return (
+        <div
+          key={idx}
+          className={`relative overflow-hidden rounded-2xl border transition-all duration-500 ${
+            isOpen ? "border-primary/40" : "border-white/10"
+          }`}
+        >
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img
+              src={panel.img}
+              alt={panel.title}
+              className={`w-full h-full object-cover transition-all duration-700 ${
+                isOpen
+                  ? "opacity-40 scale-105"
+                  : "opacity-20 grayscale"
+              }`}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/80" />
+          </div>
+
+          {/* Accordion Header */}
+          <button
+            type="button"
+            onClick={() => setActiveService(isOpen ? null : idx)}
+            aria-expanded={isOpen}
+            className="relative z-10 w-full flex items-center justify-between gap-4 p-5 sm:p-7 text-left"
+          >
+            <div className="flex items-center gap-4 min-w-0">
+              <span className="text-primary font-impact text-4xl sm:text-5xl flex-shrink-0">
+                {panel.num}
+              </span>
+
+              <div className="min-w-0">
+                <span className="block text-primary text-[9px] font-bold uppercase tracking-widest mb-1">
+                  Service {panel.num}
+                </span>
+                <h3 className="text-white text-sm sm:text-lg font-bold uppercase leading-tight">
+                  {panel.title}
+                </h3>
+              </div>
+            </div>
+
+            <span className={`w-9 h-9 flex-shrink-0 rounded-full border border-primary/50 text-primary flex items-center justify-center text-xl transition-transform duration-300 ${
+              isOpen ? "rotate-180 bg-primary/10" : ""
+            }`}>
+              {isOpen ? "−" : "+"}
+            </span>
+          </button>
+
+          {/* Accordion Content */}
+          <div
+            className={`relative z-10 grid transition-all duration-500 ease-in-out ${
+              isOpen
+                ? "grid-rows-[1fr] opacity-100"
+                : "grid-rows-[0fr] opacity-0"
+            }`}
+          >
+            <div className="overflow-hidden">
+              <div className="px-5 sm:px-7 pb-7">
+
+                <div className="h-[2px] w-12 bg-primary mb-5" />
+
+                <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-6">
+                  {panel.text}
+                </p>
+
+                <ul className="space-y-3">
+                  {panel.points.map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-3 text-white/80 text-[10px] sm:text-xs uppercase tracking-wide leading-relaxed"
+                    >
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+</section>
 
 
       <PortfolioGallery />
