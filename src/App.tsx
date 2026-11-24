@@ -40,10 +40,12 @@ import {
    Users,
    Search,
     Compass,
+    Section,
 } from 'lucide-react';
 import Lenis from 'lenis';
 import { cn } from './lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
+import PortfolioGallery from './components/PortfolioGallery';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -1101,254 +1103,13 @@ export default function App() {
             </div>
           </div>
         </section>
-        <section className="hero-section mb-24">
+        <section className="hero-section mb-4">
           <div className="relative mb-16">
             <h1 className="text-[12vw] font-black leading-[0.8] tracking-tighter font-display text-white gsap-reveal hero-line relative">
               crea<span className="text-primary italic">8</span>ors.
             </h1>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-12 mb-16 border-t border-white/5 pt-12">
-            <div className="flex items-center gap-4 hero-line gsap-reveal-left">
-              <div className="w-12 h-12 rounded-full overflow-hidden grayscale">
-                <img src="/banerjee.png" alt="Sunando" className="w-full h-full object-cover" />
-              </div>
-              <div>
-                <p className="text-sm font-bold">Sunando Chakraborty</p>
-                <p className="text-[10px] text-white/40 uppercase tracking-widest">Founder & Growth Strategist</p>
-              </div>
-            </div>
-            <div className="hero-line gsap-reveal">
-              <p className="text-lg leading-snug">
-                Hello, we are <span className="text-primary">Crea8ors.</span>, the high-performance marketing agency <span className="text-white/40 italic">scaling brands since 2009.</span>
-              </p>
-            </div>
-            <div className="flex gap-4 hero-line gsap-reveal-right">
-              <div className="w-16 h-16 bg-white/5 rounded-xl flex items-center justify-center shrink-0">
-                <Zap className="text-primary" size={24} />
-              </div>
-              <div>
-                <p className="text-sm font-bold mb-1">ROI-Obsessed Scaling</p>
-                <p className="text-[10px] text-white/40 leading-relaxed uppercase tracking-wider">Stop bleeding budget. We combine predictive data with elite creative to own your market.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative h-[600px] rounded-[40px] overflow-hidden group gsap-reveal">
-             <img 
-               src="/hero.png" 
-               alt="Team at work" 
-               className="w-full h-full object-cover  opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000" 
-             />
-             <div className="absolute top-0 left-0 p-8 flex gap-12 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-                <span>Performance Marketing</span>
-                <span>ROI Optimization</span>
-                <span>Growth 2025</span>
-             </div>
-             <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent" />
-             <div className="absolute bottom-12 left-12">
-                <a href="#projects" className="bg-primary text-white px-8 py-5 rounded-2xl font-bold flex items-center gap-3 hover:bg-white hover:text-black transition-all group shadow-2xl">
-                  Scale your revenue <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
-                </a>
-             </div>
-             <div className="absolute bottom-12 right-12 flex gap-12 items-end">
-                <div className="text-right">
-                  <p className="text-4xl font-black italic tracking-tighter">$150M+</p>
-                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-mono">Managed Ad Spend</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-4xl font-black italic tracking-tighter">4.5x</p>
-                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-mono">Average ROAS</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-4xl font-black italic tracking-tighter">250%</p>
-                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-mono">Avg Annual Scaling</p>
-                </div>
-             </div>
-          </div>
-        </section>
-
-        
-        {/* SEGMENT 2: Hero Banner – Explore our Work */}
-     <div className="pt-28 pb-32 relative text-white  selection:bg-primary selection:text-black">
-      {/* Decorative Ornaments */}
-      <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-[#200F3C]/20 via-transparent to-transparent -z-10 pointer-events-none" />
-      <div className="absolute top-1/2 right-10 w-[500px] h-[500px] bg-primary/5 blur-[160px] rounded-full pointer-events-none -z-10" />
-
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-        {/* HERO HEADER - THE JOURNEY (SLIDE 2) */}
-        <div className="mb-32 text-center max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-8"
-          >
-            <Compass size={10} className="text-primary" /> OUR JOURNEY
-          </motion.div>
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-5xl sm:text-7xl md:text-8xl font-impact font-medium leading-none uppercase tracking-tighter mb-8"
-          >
-            THE ROAD TO <span className="text-primary italic">BRAND DOMINANCE.</span>
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed space-y-6"
-          >
-            <p>
-              Crea8ors is a dynamic marketing and branding agency crafting impactful brand experiences across diverse sectors.
-            </p>
-            <p className="text-sm text-white/40 max-w-2xl mx-auto">
-              We specialise in experiential marketing, rural activations, regional in-film associations, brand engagement, creative design, branded content, events and production.
-            </p>
-            <div className="pt-6 font-mono text-xs uppercase tracking-[0.2em] text-primary font-bold">
-              Our focus is simple &mdash; <span className="text-white">innovative ideas</span>, <span className="text-white">meaningful engagement</span>, <span className="text-white">measurable growth</span>.
-            </div>
-          </motion.div>
-        </div>
-
-        {/* MISSION & VISION (SLIDE 3) */}
-        <div className="grid md:grid-cols-2 gap-8 mb-40">
-          <div className="bg-gradient-to-br from-[#0C0616] to-[#05010A] border border-white/5 p-10 md:p-16 rounded-[40px] relative overflow-hidden group hover:border-primary/20 transition-all duration-500">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
-            <div className="space-y-6 relative z-10">
-              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                <Target className="w-6 h-6" />
-              </div>
-              <span className="text-xs font-mono uppercase tracking-widest text-primary font-bold block">// Core Drive</span>
-              <h2 className="text-3xl md:text-4xl font-impact uppercase tracking-tight text-white">
-                OUR MISSION
-              </h2>
-              <p className="text-white/60 text-base leading-relaxed">
-                To build innovative, effective and impactful brand solutions that exceed expectations and drive business growth.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-[#050C0A] to-black border border-white/5 p-10 md:p-16 rounded-[40px] relative overflow-hidden group hover:border-primary/20 transition-all duration-500">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl" />
-            <div className="space-y-6 relative z-10">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                <Eye className="w-6 h-6" />
-              </div>
-              <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block">// The Horizon</span>
-              <h2 className="text-3xl md:text-4xl font-impact uppercase tracking-tight text-white">
-                OUR VISION
-              </h2>
-              <p className="text-white/60 text-base leading-relaxed">
-                To become a leading creative force recognised for strategic thinking, transformative ideas, and unwavering dedication to client success.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* LEADERSHIP & DIRECTORS (SLIDES 4 & 5) */}
-        <div className="mb-40">
-          <div className="mb-16 text-center md:text-left">
-            <span className="text-primary font-mono text-xs uppercase font-bold tracking-[0.2em] block mb-2">// The Brains behind Crea8ors</span>
-            <h2 className="text-4xl md:text-7xl font-impact uppercase tracking-tight text-white">
-              OUR <span className="text-primary italic">DIRECTORS</span>
-            </h2>
-            <p className="text-white/40 text-sm max-w-xl mt-2">
-              Seasoned leaders bringing together decades of sales, movie integration, and on-ground activations.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-            {directors.map((director, idx) => (
-              <div 
-                key={idx}
-                className="bg-white/[0.01] border border-white/5 rounded-[40px] overflow-hidden flex flex-col justify-between hover:border-white/15 transition-all duration-500 group"
-              >
-                <div>
-                  {/* Photo area with modern overlay */}
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <img 
-                      src={director.image} 
-                      alt={director.name}
-                      className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                    <div className="absolute bottom-6 left-8 right-8">
-                      <span className="text-xs font-mono font-bold text-primary uppercase tracking-widest block mb-1">
-                        {director.title}
-                      </span>
-                      <h3 className="text-3xl font-impact text-white uppercase tracking-tight leading-none">
-                        {director.name}
-                      </h3>
-                    </div>
-                  </div>
-
-                  {/* Biography */}
-                  <div className="p-8 md:p-10 space-y-4">
-                    <div className="flex items-center gap-3">
-                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-white/5 border border-white/10 text-white/60">
-                        Senior Leadership
-                      </span>
-                      <span className="text-[10px] font-mono uppercase text-primary font-bold">
-                        {director.experience} Industry Expertise
-                      </span>
-                    </div>
-                    <p className="text-white/60 text-sm leading-relaxed">
-                      {director.bio}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CORE STRENGTHS (SLIDE 6) */}
-        <div className="mb-40 py-24 px-8 md:px-16 bg-[#0B0C10] rounded-[50px] border border-white/5 relative overflow-hidden">
-          <div className="absolute -top-12 -left-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 space-y-6">
-              <span className="text-primary font-mono text-xs uppercase font-bold tracking-[0.2em] block">// Competitive Edge</span>
-              <h2 className="text-4xl md:text-6xl font-impact uppercase tracking-tight text-white leading-none">
-                OUR CORE <br/>
-                <span className="text-primary italic">STRENGTHS</span>
-              </h2>
-              <p className="text-white/50 text-sm leading-relaxed">
-                By maintaining absolute control over our planning and execution channels, we scale activations with zero service degradation.
-              </p>
-              <div className="h-[2px] w-20 bg-primary rounded" />
-            </div>
-
-            <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
-              {strengths.map((strength, index) => (
-                <div 
-                  key={index}
-                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 hover:bg-white/[0.04] transition-all duration-300 flex items-center justify-between group"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="text-lg font-impact text-primary/40 group-hover:text-primary font-black transition-colors">
-                      {(index + 1).toString().padStart(2, '0')}
-                    </span>
-                    <h3 className="text-sm font-bold uppercase tracking-wider text-white font-mono">
-                      {strength}
-                    </h3>
-                  </div>
-                  <Zap className="w-4 h-4 text-primary/20 group-hover:text-primary transition-colors" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-    
-
-      </div>
-    </div>
-
-        {/* SEGMENT 3: Introduction – Who We Are */}
-        <section id="who-we-are" className="mb-24 md:mb-32">
+           <section id="who-we-are" className="mb-24 md:mb-32">
           <div className="grid lg:grid-cols-12 gap-6 items-stretch">
             <div className="lg:col-span-5 bento-card flex flex-col justify-between gsap-reveal-left bg-[#0C0616] border-white/10">
               <div>
@@ -1456,11 +1217,290 @@ export default function App() {
           </AnimatePresence>
         </section>
 
+          {/* <div className="grid md:grid-cols-3 gap-12 mb-16 border-t border-white/5 pt-12">
+            <div className="flex items-center gap-4 hero-line gsap-reveal-left">
+              <div className="w-12 h-12 rounded-full overflow-hidden grayscale">
+                <img src="/banerjee.png" alt="Sunando" className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <p className="text-sm font-bold">Sunando Chakraborty</p>
+                <p className="text-[10px] text-white/40 uppercase tracking-widest">Founder & Growth Strategist</p>
+              </div>
+            </div>
+            <div className="hero-line gsap-reveal">
+              <p className="text-lg leading-snug">
+                Hello, we are <span className="text-primary">Crea8ors.</span>, the high-performance marketing agency <span className="text-white/40 italic">scaling brands since 2009.</span>
+              </p>
+            </div>
+            <div className="flex gap-4 hero-line gsap-reveal-right">
+              <div className="w-16 h-16 bg-white/5 rounded-xl flex items-center justify-center shrink-0">
+                <Zap className="text-primary" size={24} />
+              </div>
+              <div>
+                <p className="text-sm font-bold mb-1">ROI-Obsessed Scaling</p>
+                <p className="text-[10px] text-white/40 leading-relaxed uppercase tracking-wider">Stop bleeding budget. We combine predictive data with elite creative to own your market.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative h-[600px] rounded-[40px] overflow-hidden group gsap-reveal">
+             <img 
+               src="/hero.png" 
+               alt="Team at work" 
+               className="w-full h-full object-cover  opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000" 
+             />
+             <div className="absolute top-0 left-0 p-8 flex gap-12 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
+                <span>Performance Marketing</span>
+                <span>ROI Optimization</span>
+                <span>Growth 2025</span>
+             </div>
+             <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent" />
+             <div className="absolute bottom-12 left-12">
+                <a href="#projects" className="bg-primary text-white px-8 py-5 rounded-2xl font-bold flex items-center gap-3 hover:bg-white hover:text-black transition-all group shadow-2xl">
+                  Scale your revenue <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                </a>
+             </div>
+             <div className="absolute bottom-12 right-12 flex gap-12 items-end">
+                <div className="text-right">
+                  <p className="text-4xl font-black italic tracking-tighter">$150M+</p>
+                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-mono">Managed Ad Spend</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-4xl font-black italic tracking-tighter">4.5x</p>
+                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-mono">Average ROAS</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-4xl font-black italic tracking-tighter">250%</p>
+                  <p className="text-[10px] text-white/40 uppercase tracking-widest font-mono">Avg Annual Scaling</p>
+                </div>
+             </div>
+          </div> */}
+          
+        </section>
+
+        
+        {/* SEGMENT 2: Hero Banner – Explore our Work */}
+     <div className="pt-28 pb-32 relative text-white  selection:bg-primary selection:text-black">
+      {/* Decorative Ornaments */}
+      <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-[#200F3C]/20 via-transparent to-transparent -z-10 pointer-events-none" />
+      <div className="absolute top-1/2 right-10 w-[500px] h-[500px] bg-primary/5 blur-[160px] rounded-full pointer-events-none -z-10" />
+
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+        {/* HERO HEADER - THE JOURNEY (SLIDE 2) */}
+        {/* <div className="mb-32 text-center max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-8"
+          >
+            <Compass size={10} className="text-primary" /> OUR JOURNEY
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-5xl sm:text-7xl md:text-8xl font-impact font-medium leading-none uppercase tracking-tighter mb-8"
+          >
+            THE ROAD TO <span className="text-primary italic">BRAND DOMINANCE.</span>
+          </motion.h1>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed space-y-6"
+          >
+            <p>
+              Crea8ors is a dynamic marketing and branding agency crafting impactful brand experiences across diverse sectors.
+            </p>
+            <p className="text-sm text-white/40 max-w-2xl mx-auto">
+              We specialise in experiential marketing, rural activations, regional in-film associations, brand engagement, creative design, branded content, events and production.
+            </p>
+            <div className="pt-6 font-mono text-xs uppercase tracking-[0.2em] text-primary font-bold">
+              Our focus is simple &mdash; <span className="text-white">innovative ideas</span>, <span className="text-white">meaningful engagement</span>, <span className="text-white">measurable growth</span>.
+            </div>
+          </motion.div>
+        </div> */}
+
+    
+        <div className="grid md:grid-cols-2 gap-8 mb-10">
+          {/* <div className="bg-gradient-to-br from-[#0C0616] to-[#05010A] border border-white/5 p-10 md:p-16 rounded-[40px] relative overflow-hidden group hover:border-primary/20 transition-all duration-500"> */}
+            {/* <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
+            <div className="space-y-6 relative z-10">
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                <Target className="w-6 h-6" />
+              </div>
+              <span className="text-xs font-mono uppercase tracking-widest text-primary font-bold block">// Core Drive</span>
+              <h2 className="text-3xl md:text-4xl font-impact uppercase tracking-tight text-white">
+                OUR MISSION
+              </h2>
+              <p className="text-white/60 text-base leading-relaxed">
+                To build innovative, effective and impactful brand solutions that exceed expectations and drive business growth.
+              </p>
+            </div> */}
+          {/* </div> */}
+
+          {/* <div className="bg-gradient-to-br from-[#050C0A] to-black border border-white/5 p-10 md:p-16 rounded-[40px] relative overflow-hidden group hover:border-primary/20 transition-all duration-500"> */}
+            {/* <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl" />
+            <div className="space-y-6 relative z-10">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <Eye className="w-6 h-6" />
+              </div>
+              <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block">// The Horizon</span>
+              <h2 className="text-3xl md:text-4xl font-impact uppercase tracking-tight text-white">
+                OUR VISION
+              </h2>
+              <p className="text-white/60 text-base leading-relaxed">
+                To become a leading creative force recognised for strategic thinking, transformative ideas, and unwavering dedication to client success.
+              </p>
+            </div> */}
+          {/* </div> */}
+        </div>
+
+        {/* LEADERSHIP & DIRECTORS (SLIDES 4 & 5) */}
+       <div className="md:col-span-12 mt-2 mb-4 border-t border-white/5 pt-2">
+           <div className="gsap-reveal">
+               <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-[0.2em] mb-4 block">// Leadership Team</span>
+               <h3 className="text-7xl md:text-8xl font-impact font-bold tracking-tight uppercase leading-[0.8]">The <span className="relative inline-block"><span className="text-outline italic">Visionaries.</span> <Search className="absolute -bottom-2 -left-8 text-white w-6 h-6 -rotate-45 opacity-40" /></span></h3>
+           </div>
+        </div>
+        <div className="flex flex-row gap-6 w-full">
+  {[
+    {
+      name: "Sunando Chakraborty",
+      role: "Co-founder & Director",
+      desc: "15+ years experience in business development and client strategy. Storyteller & brand enthusiast.",
+      img: "/banerjee.png",
+      reveal: "gsap-reveal-left"
+    },
+    {
+      name: "Shubhadeep Sarkaar",
+      role: "Director",
+      desc: "15+ years expertise in sales and marketing across leading media groups including India Today.",
+      img: "/sarkar.png",
+      reveal: "gsap-reveal-right"
+    }
+  ].map((director, idx) => (
+    <div
+      key={idx}
+      className={cn(
+        "flex-1 min-w-0 bento-card p-0 flex flex-col group overflow-hidden",
+        director.reveal
+      )}
+    >
+      <div className="w-full h-[300px] overflow-hidden">
+       <img
+  src={director.img}
+  alt={director.name}
+  className="w-full h-full object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 "
+/>
+      </div>
+
+      <div className="p-8 flex flex-col justify-center">
+        <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-widest mb-2">
+          {director.role}
+        </span>
+        <h4 className="text-3xl font-display font-bold mb-4">
+          {director.name}
+        </h4>
+        <p className="text-white/40 text-xs leading-relaxed">
+          {director.desc}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
+        {/* {[
+          { 
+            name: "Sunando Chakraborty", 
+            role: "Co-founder & Director", 
+            desc: "15+ years experience in business development and client strategy. Storyteller & brand enthusiast.",
+            img: "/banerjee.png",
+            reveal: "gsap-reveal-left"
+          },
+          { 
+            name: "Shubhadeep Sarkaar", 
+            role: "Director", 
+            desc: "15+ years expertise in sales and marketing across leading media groups including India Today.",
+            img: "/sarkar.png",
+            reveal: "gsap-reveal-right"
+          }
+        ].map((director, idx) => (
+          <div key={idx} className={cn("md:col-span-6 md:row-span-2 bento-card p-0 flex flex-col md:flex-row group", director.reveal)}>
+             <div className="md:w-1/2 overflow-hidden h-[300px] md:h-auto">
+                <img src={director.img} alt={director.name} className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+             </div>
+             <div className="md:w-1/2 p-8 flex flex-col justify-center">
+                <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-widest mb-2">{director.role}</span>
+                <h4 className="text-3xl font-display font-bold mb-4">{director.name}</h4>
+                <p className="text-white/40 text-xs leading-relaxed">{director.desc}</p>
+             </div>
+          </div>
+        ))} */}
+
+        {/* BENEFITS SECTION */}
+        {/* <div className="md:col-span-4 md:row-span-2 bento-card bg-primary group gsap-reveal">
+           <h4 className="text-5xl font-impact font-black leading-none mb-8 tracking-tighter italic">HOW DOES YOUR <span className="text-outline">BRAND</span> BENEFIT?</h4>
+           <p className="text-white/80 text-sm leading-relaxed">
+             We create a cycle of engagement that continuously elevates your brand's market position through immersion and constant conversation.
+           </p>
+           <div className="mt-8 pt-8 border-t border-white/20">
+             <div className="text-[10px] font-mono uppercase tracking-[0.2em] opacity-60">Status: Dominating</div>
+           </div>
+        </div> */}
+
+        {/* CORE STRENGTHS (SLIDE 6) */}
+        {/* <div className="mb-40 py-24 px-8 md:px-16 bg-[#0B0C10] rounded-[50px] border border-white/5 relative overflow-hidden">
+          <div className="absolute -top-12 -left-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-5 space-y-6">
+              <span className="text-primary font-mono text-xs uppercase font-bold tracking-[0.2em] block">// Competitive Edge</span>
+              <h2 className="text-4xl md:text-6xl font-impact uppercase tracking-tight text-white leading-none">
+                OUR CORE <br/>
+                <span className="text-primary italic">STRENGTHS</span>
+              </h2>
+              <p className="text-white/50 text-sm leading-relaxed">
+                By maintaining absolute control over our planning and execution channels, we scale activations with zero service degradation.
+              </p>
+              <div className="h-[2px] w-20 bg-primary rounded" />
+            </div>
+
+            <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+              {strengths.map((strength, index) => (
+                <div 
+                  key={index}
+                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 hover:bg-white/[0.04] transition-all duration-300 flex items-center justify-between group"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="text-lg font-impact text-primary/40 group-hover:text-primary font-black transition-colors">
+                      {(index + 1).toString().padStart(2, '0')}
+                    </span>
+                    <h3 className="text-sm font-bold uppercase tracking-wider text-white font-mono">
+                      {strength}
+                    </h3>
+                  </div>
+                  <Zap className="w-4 h-4 text-primary/20 group-hover:text-primary transition-colors" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div> */}
+
+    
+
+      </div>
+    </div>
+
+        {/* SEGMENT 3: Introduction – Who We Are */}
+       
+
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(180px,auto)]">
          
 
         {/* STRENGTHS SECTION */}
-        <div id="strengths" className="md:col-span-12 mt-12 mb-4">
+        {/* <div id="strengths" className="md:col-span-12 mt-12 mb-4">
            <div className="flex items-end justify-between gsap-reveal">
              <div className="max-w-2xl">
                <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-[0.2em] mb-4 block">// Core Capabilities</span>
@@ -1484,10 +1524,10 @@ export default function App() {
              <h4 className="text-2xl font-display font-bold mb-3">{item.title}</h4>
              <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
           </div>
-        ))}
+        ))} */}
 
         {/* DETAILED SERVICES SECTION */}
-        <div id="services" className="md:col-span-12 mt-24 mb-4 border-t border-white/5 pt-12">
+        {/* <div id="services" className="md:col-span-12 mt-24 mb-4 border-t border-white/5 pt-12">
            <div className="flex items-end justify-between gsap-reveal">
              <div className="max-w-2xl">
                <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-[0.2em] mb-4 block">// Specialized Solutions</span>
@@ -1513,7 +1553,7 @@ export default function App() {
              <p className="text-white/40 text-sm leading-relaxed">{service.desc}</p>
           </div>
         ))}
-       
+        */}
 
         {/* BENEFITS SECTION */}
         <div className="md:col-span-4 md:row-span-2 bento-card bg-primary group gsap-reveal">
@@ -1547,7 +1587,7 @@ export default function App() {
         {/* SEGMENT 4: What We Do (4 Verticals + Our IPs) */}
         <section id="what-we-do" className="mb-24 md:mb-32 border-t border-white/5 pt-20">
         
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 gsap-reveal">
+          {/* <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 gsap-reveal">
             <div className="max-w-3xl">
               <span className="text-primary font-mono text-[11px] uppercase font-bold tracking-[0.2em] mb-3 block">
                 What We Do
@@ -1567,10 +1607,10 @@ export default function App() {
             >
               Explore Services (incl IPs) <ArrowRight size={16} />
             </button>
-          </div>
+          </div> */}
 
           {/* 4 Vertical Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {VERTICALS.map((vertical) => {
               const isExpanded = expandedVertical === vertical.num;
               return (
@@ -1642,10 +1682,10 @@ export default function App() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
 
           {/* Our IPs – Ideas We Own. Experiences We Create */}
-          <div
+          {/* <div
             id="our-ips"
             className="bento-card bg-[#0C0616] border-white/10 p-8 md:p-12 rounded-[40px] gsap-reveal"
           >
@@ -1699,11 +1739,159 @@ export default function App() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </section>
 
+         
+<section className="min-h-screen grid lg:grid-cols-12 bg-dark border-t border-white/5 overflow-hidden">
+
+  {/* Left Side: Statement */}
+  <div className="lg:col-span-4 p-12 md:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 bg-black relative z-10">
+    <div className="gsap-reveal">
+      <h2 className="text-[10vw] lg:text-[6vw] font-bold leading-[0.9] tracking-tighter mb-8 italic uppercase">
+        What.<br />we.<br />do.
+      </h2>
+      <div className="w-24 h-2 bg-gradient-to-r from-primary via-orange-500 to-purple-600 rounded-full mb-12" />
+      <p className="text-white/40 text-lg max-w-sm leading-relaxed uppercase tracking-widest font-mono text-[10px]">
+        Seamless integration of performance media, creative tech, and brand storytelling.
+      </p>
+    </div>
+  </div>
+
+  {/* Right Side: Service Panels */}
+  <div className="lg:col-span-8 flex flex-col md:flex-row min-h-[800px] bg-black">
+
+    {[
+      {
+        num: "01",
+        title: "Experiential Marketing",
+        img: "/point1.png",
+        text: "Creating meaningful brand experiences that bring consumers closer to brands.",
+        points: [
+          "BTL & Consumer Activations",
+          "Consumer Engagement & Sampling",
+          "Mall & Retail Activations",
+          "Outdoor & On-ground Experiences",
+          "Fabricator & Channel Partner Meets",
+          "Brand Engagement Campaigns"
+        ]
+      },
+      {
+        num: "02",
+        title: "Rural & Regional Outreach",
+        img: "/point2.png",
+        text: "Taking brands beyond conventional media and connecting them with consumers at the grassroots.",
+        points: [
+          "Jatra-Based Brand Integration",
+          "Mobile Theatre Activations",
+          "Fairs & Melas Branding",
+          "Rural Consumer Engagement",
+          "Village-Level Brand Activation",
+          "Regional & Hyperlocal Campaigns"
+        ]
+      },
+      {
+        num: "03",
+        title: "Brand Solutions",
+        img: "/point3.png",
+        text: "Integrated brand communication solutions that amplify visibility, build relevance and create lasting impact.",
+        points: [
+          "Corporate Events & Conferences",
+          "Product Launches & Brand Experiences",
+          "Event Planning & Production",
+          "In-film Brand Integration",
+          "Branded Content & Entertainment",
+          "Sponsorships & Brand Partnerships",
+          "Outdoor Branding & Media Solutions"
+        ]
+      },
+      {
+        num: "04",
+        title: "Digital & Growth Marketing",
+        img: "/point4.png",
+        text: "Driving measurable business growth through digital strategy, creativity and performance-led marketing.",
+        points: [
+          "Search Engine Optimisation (SEO)",
+          "Search Engine Marketing (SEM)",
+          "App Store Optimisation (ASO)",
+          "Influencer & Creator Marketing",
+          "Website Design & Development",
+          "Performance Marketing & Lead Generation",
+          "Content & Social Media Marketing"
+        ]
+      }
+    ].map((panel, idx) => (
+      <div
+        key={idx}
+        className="service-panel flex-1 min-w-0 relative group overflow-hidden border-b md:border-b-0 md:border-r border-white/5 md:last:border-r-0 min-h-[600px] md:min-h-0 flex flex-col justify-end p-6 lg:p-8 transition-all duration-700 ease-in-out hover:flex-[2.8] focus-within:flex-[2.8]"
+      >
+
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={panel.img}
+            alt={panel.title}
+            className="w-full h-full object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-50 group-hover:scale-110 transition-all duration-1000"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20 group-hover:via-black/80 transition-all duration-700" />
+        </div>
+
+        {/* Default Content */}
+        <div className="relative z-10 transition-all duration-500">
+
+          <div className="flex items-center gap-3 mb-4 group-hover:translate-x-2 transition-transform">
+            <div className="w-5 h-[1px] bg-primary flex-shrink-0" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-primary">
+              {panel.title}
+            </span>
+          </div>
+
+          <div className="text-[75px] lg:text-[100px] font-impact font-medium leading-none text-outline-thin text-transparent mb-6 group-hover:text-white transition-all duration-500">
+            {panel.num}
+          </div>
+
+          {/* Expanded Content */}
+          <div className="max-h-0 opacity-0 overflow-hidden group-hover:max-h-[650px] group-hover:opacity-100 group-focus-within:max-h-[650px] group-focus-within:opacity-100 transition-all duration-700 ease-in-out">
+
+            <div className="h-[2px] w-12 bg-primary mb-5" />
+
+            <h3 className="text-white text-xl lg:text-2xl font-bold uppercase leading-tight mb-4">
+              {panel.title}
+            </h3>
+
+            <p className="text-white/70 text-xs leading-relaxed mb-6 max-w-sm">
+              {panel.text}
+            </p>
+
+            <ul className="space-y-3 pb-4">
+              {panel.points.map((point, i) => (
+                <li
+                  key={i}
+                  className="flex items-start gap-3 text-white/80 text-[10px] lg:text-xs uppercase tracking-wide leading-relaxed"
+                >
+                  <span className="text-primary mt-0.5 flex-shrink-0">•</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+
+          </div>
+
+          {/* Hover Indicator */}
+          <div className="h-[2px] w-0 group-hover:w-12 bg-primary transition-all duration-700 mt-4" />
+
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+      <PortfolioGallery />
+
         {/* SEGMENT 5: Featured Work – Campaigns That Make an Impact */}
-        <section id="our-work" className="mb-24 md:mb-32 border-t border-white/5 pt-20">
+        {/* <section id="our-work" className="mb-24 md:mb-32 border-t border-white/5 pt-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 gsap-reveal">
             <div className="max-w-3xl">
               <span className="text-primary font-mono text-[11px] uppercase font-bold tracking-[0.2em] mb-3 block">
@@ -1766,7 +1954,7 @@ export default function App() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* SEGMENT 6: Our Clients – Brands That Trust Us */}
         <section id="clients" className="mb-4 md:mb-2 border-t border-white/5 pt-20">
@@ -1781,7 +1969,7 @@ export default function App() {
             </div>
         
           </div>
-
+{/* 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-2 gsap-reveal">
             {CLIENTS.map((client) => (
               <div
@@ -1793,14 +1981,20 @@ export default function App() {
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
         </section>
 
-           <section id="clients" className="py-14 border-b border-white/5 ">
+
+
+{/* SECTION: WE ARE ONE */}
+     
+         {/* BRAND BENEFIT SECTION */}
+     
+                 <section id="clients" className="py-14 border-b border-white/5 ">
     <div className="max-w-[1440px] mx-auto px-12 mb-12 flex items-center gap-6 gsap-reveal">
-     <span className="font-mono text-[10px] uppercase font-bold opacity-30 tracking-[0.3em]">
+     {/* <span className="font-mono text-[10px] uppercase font-bold opacity-30 tracking-[0.3em]">
       Industry Partners
-     </span>
+     </span> */}
      <div className="h-[1px] flex-1 bg-white/5" />
   </div>
 
@@ -1812,51 +2006,7 @@ export default function App() {
     </div>
   </div>
 </section>
-
-
-{/* SECTION: WE ARE ONE */}
-      <section className="min-h-screen grid lg:grid-cols-12 bg-dark border-t border-white/5 overflow-hidden">
-        {/* Left Side: Statement */}
-        <div className="lg:col-span-4 p-12 md:p-24 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5 bg-black relative z-10">
-           <div className="gsap-reveal">
-              <h2 className="text-[10vw] lg:text-[6vw] font-bold leading-[0.9] tracking-tighter mb-8 italic uppercase">
-                We.<br/>Are.<br/>One.
-              </h2>
-              <div className="w-24 h-2 bg-gradient-to-r from-primary via-orange-500 to-purple-600 rounded-full mb-12" />
-              <p className="text-white/40 text-lg max-w-sm leading-relaxed uppercase tracking-widest font-mono text-[10px]">
-                Seamless integration of performance media, creative tech, and brand storytelling.
-              </p>
-           </div>
-        </div>
-
-        {/* Right Side: Panels */}
-        <div className="lg:col-span-8 flex flex-col md:flex-row h-full min-h-[600px] bg-black">
-           {[
-             { num: "01", title: "#Pointone", img: "/point1.png", text: "Strategic market positioning with surgical precision." },
-             { num: "02", title: "#Pointtwo", img: "/point2.png", text: "Human-centric creatives connecting at scale." },
-             { num: "03", title: "#Pointthree", img: "/point3.png", text: "Scalable growth systems built for the modern era." }
-           ].map((panel, idx) => (
-             <div key={idx} className="flex-1 relative group overflow-hidden border-b md:border-b-0 md:border-r border-white/5 md:last:border-r-0 h-full flex flex-col justify-end p-12 transition-all duration-700 hover:flex-[1.5] hover:bg-white/5">
-                <div className="absolute inset-0 z-0">
-                  <img src={panel.img} className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all duration-1000" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                </div>
-                
-                <div className="relative z-10">
-                   <div className="flex items-center gap-4 mb-4 group-hover:translate-x-2 transition-transform">
-                      <div className="w-4 h-[1px] bg-primary" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-primary">{panel.title}</span>
-                   </div>
-                   <div className="text-[100px] font-impact font-medium leading-none text-outline-thin text-transparent mb-8 group-hover:text-white transition-all duration-500">{panel.num}</div>
-                   <div className="h-[2px] w-0 group-hover:w-12 bg-primary transition-all duration-700 mb-4" />
-                   <p className="text-white/30 text-[10px] uppercase tracking-widest leading-relaxed max-w-[200px] group-hover:text-white transition-colors uppercase">{panel.text}</p>
-                </div>
-             </div>
-           ))}
-        </div>
-      </section>
-         {/* BRAND BENEFIT SECTION */}
-      <section className="py-40  border-t border-white/5 relative overflow-hidden">
+ <section className="py-40  border-t border-white/5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] -z-10 rounded-full" />
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-32">
