@@ -1157,9 +1157,9 @@ export default function App() {
                      </p>
                      <div className="flex flex-wrap justify-center gap-6">
                         <button className="bg-primary text-black px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">Explore Our Works</button>
-                        <button className="bg-white/5 text-white border border-white/10 px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-white/10">
+                        {/* <button className="bg-white/5 text-white border border-white/10 px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-white/10">
                            Watch A Demo <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-black">▶</div>
-                        </button>
+                        </button> */}
                      </div>
                   </div>
                </div>
@@ -1422,13 +1422,27 @@ export default function App() {
         </div>
 
         {/* LEADERSHIP & DIRECTORS (SLIDES 4 & 5) */}
-       <div className="md:col-span-12 mt-2 mb-4 border-t border-white/5 pt-2">
-           <div className="gsap-reveal">
-               <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-[0.2em] mb-4 block">// Leadership Team</span>
-               <h3 className="text-7xl md:text-8xl font-impact font-bold tracking-tight uppercase leading-[0.8]">The <span className="relative inline-block"><span className="text-outline italic">Visionaries.</span> <Search className="absolute -bottom-2 -left-8 text-white w-6 h-6 -rotate-45 opacity-40" /></span></h3>
-           </div>
-        </div>
-        <div className="flex flex-row gap-6 w-full">
+       
+{/* LEADERSHIP HEADING */}
+<div className="col-span-full mt-2 mb-6 border-t border-white/5 pt-6">
+  <div className="gsap-reveal">
+    <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-[0.2em] mb-4 block">
+      // Leadership Team
+    </span>
+
+    <h3 className="text-5xl sm:text-7xl md:text-8xl font-impact font-bold tracking-tight uppercase leading-[0.9]">
+      The{" "}
+      <span className="relative inline-block">
+        <span className="text-outline italic">Visionaries.</span>
+        <Search className="absolute -bottom-2 -left-5 sm:-left-8 text-white w-5 sm:w-6 h-5 sm:h-6 -rotate-45 opacity-40" />
+      </span>
+    </h3>
+  </div>
+</div>
+
+{/* LEADERSHIP CARDS */}
+<div className="col-span-full w-full min-w-0 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+
   {[
     {
       name: "Sunando Chakraborty",
@@ -1448,32 +1462,41 @@ export default function App() {
     <div
       key={idx}
       className={cn(
-        "flex-1 min-w-0 bento-card p-0 flex flex-col group overflow-hidden",
+        "w-full min-w-0 bento-card p-0 flex flex-col overflow-hidden group",
         director.reveal
       )}
     >
-      <div className="w-full h-[300px] overflow-hidden">
-       <img
-  src={director.img}
-  alt={director.name}
-  className="w-full h-full object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 "
-/>
+
+      {/* IMAGE */}
+      <div className="w-full h-[260px] sm:h-[320px] md:h-[300px] lg:h-[380px] overflow-hidden bg-black/20">
+        <img
+          src={director.img}
+          alt={director.name}
+          className="w-full h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+        />
       </div>
 
-      <div className="p-8 flex flex-col justify-center">
-        <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-widest mb-2">
+      {/* DETAILS */}
+      <div className="w-full min-w-0 p-5 sm:p-7 md:p-8 flex flex-col justify-center">
+
+        <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-widest mb-3">
           {director.role}
         </span>
-        <h4 className="text-3xl font-display font-bold mb-4">
+
+        <h4 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 leading-tight break-words">
           {director.name}
         </h4>
-        <p className="text-white/40 text-xs leading-relaxed">
+
+        <p className="text-white/40 text-xs sm:text-sm leading-relaxed max-w-md">
           {director.desc}
         </p>
+
       </div>
     </div>
   ))}
+
 </div>
+
 
         {/* {[
           { 
