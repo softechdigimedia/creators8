@@ -1127,12 +1127,12 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <main className="max-w-[1440px] mx-auto px-6 lg:px-12 pt-28 md:pt-32 pb-16">
-         <section className="mb-32 relative bg-primary rounded-[60px] overflow-hidden py-32 text-black">
+      <main className="max-w-[1440px] mx-auto px-6 lg:px-12 pt-16 md:pt-20 md:pt-32 pb-16">
+         <section className="mb-16 relative bg-primary rounded-[60px] overflow-hidden py-14 md:py-16 text-black">
        
 
           <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-20">
-            <div className="flex flex-col items-center text-center mb-24">
+            <div className="flex flex-col items-center text-center mb-12">
                <div className="flex items-center gap-2 mb-6">
             
                  <span className="text-3xl font-impact uppercase tracking-tighter">crea8ors</span>
@@ -1144,7 +1144,7 @@ export default function App() {
             </div>
 
             {/* Main Mockup Card */}
-            <div className="relative max-w-5xl mx-auto mb-24">
+            <div className="relative max-w-5xl mx-auto mb-12">
                <div className="bg-dark rounded-3xl border border-white/10 p-2 md:p-4 rotate-x-6 rotate-y-3 shadow-2xl overflow-hidden group hover:rotate-0 transition-all duration-700">
                   <div className="bg-[#111] rounded-2xl p-8 md:p-16 text-center border border-white/5 relative">
                 
@@ -1172,7 +1172,7 @@ export default function App() {
               crea<span className="text-primary italic">8</span>ors.
             </h1>
           </div>
-           <section id="who-we-are" className="mb-24 md:mb-32">
+           <section id="who-we-are" className="mb-12 md:mb-16">
           <div className="grid lg:grid-cols-12 gap-6 items-stretch">
             <div className="lg:col-span-5 bento-card flex flex-col justify-between gsap-reveal-left bg-[#0C0616] border-white/10">
               <div>
@@ -1343,14 +1343,14 @@ export default function App() {
 
         
         {/* SEGMENT 2: Hero Banner – Explore our Work */}
-     <div className="pt-28 pb-32 relative text-white  selection:bg-primary selection:text-black">
+     <div className="pt-16 md:pt-20 pb-16 md:pb-20 relative text-white  selection:bg-primary selection:text-black">
       {/* Decorative Ornaments */}
       <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-[#200F3C]/20 via-transparent to-transparent -z-10 pointer-events-none" />
       <div className="absolute top-1/2 right-10 w-[500px] h-[500px] bg-primary/5 blur-[160px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         {/* HERO HEADER - THE JOURNEY (SLIDE 2) */}
-        {/* <div className="mb-32 text-center max-w-4xl mx-auto">
+        {/* <div className="mb-16 text-center max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1387,7 +1387,7 @@ export default function App() {
         </div> */}
 
     
-        <div className="grid md:grid-cols-2 gap-8 mb-10">
+        <div className="grid md:grid-cols-2 gap-8 ">
           {/* <div className="bg-gradient-to-br from-[#0C0616] to-[#05010A] border border-white/5 p-10 md:p-16 rounded-[40px] relative overflow-hidden group hover:border-primary/20 transition-all duration-500"> */}
             {/* <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
             <div className="space-y-6 relative z-10">
@@ -1424,7 +1424,7 @@ export default function App() {
         {/* LEADERSHIP & DIRECTORS (SLIDES 4 & 5) */}
        
 {/* LEADERSHIP HEADING */}
-<div className="col-span-full mt-2 mb-6 border-t border-white/5 pt-6">
+<div className="col-span-full mt-2 mb-6 border-t border-white/5 ">
   <div className="gsap-reveal">
     <span className="text-primary font-mono text-[10px] uppercase font-bold tracking-[0.2em] mb-4 block">
       // Leadership Team
@@ -1538,7 +1538,7 @@ export default function App() {
         </div> */}
 
         {/* CORE STRENGTHS (SLIDE 6) */}
-        {/* <div className="mb-40 py-24 px-8 md:px-16 bg-[#0B0C10] rounded-[50px] border border-white/5 relative overflow-hidden">
+        {/* <div className="mb-40 py-12 md:py-14 px-8 md:px-16 bg-[#0B0C10] rounded-[50px] border border-white/5 relative overflow-hidden">
           <div className="absolute -top-12 -left-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-6">
@@ -1671,7 +1671,7 @@ export default function App() {
       </div>
 
         {/* SEGMENT 4: What We Do (4 Verticals + Our IPs) */}
-        <section id="what-we-do" className="mb-24 md:mb-32 border-t border-white/5 pt-20">
+        <section id="what-we-do" className="mb-12 md:mb-16 border-t border-white/5 pt-10 md:pt-12">
         
           {/* <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 gsap-reveal">
             <div className="max-w-3xl">
@@ -2004,7 +2004,7 @@ export default function App() {
       <PortfolioGallery />
 
         {/* SEGMENT 5: Featured Work – Campaigns That Make an Impact */}
-        {/* <section id="our-work" className="mb-24 md:mb-32 border-t border-white/5 pt-20">
+        {/* <section id="our-work" className="mb-12 md:mb-16 border-t border-white/5 pt-10 md:pt-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 gsap-reveal">
             <div className="max-w-3xl">
               <span className="text-primary font-mono text-[11px] uppercase font-bold tracking-[0.2em] mb-3 block">
@@ -2070,7 +2070,7 @@ export default function App() {
         </section> */}
 
         {/* SEGMENT 6: Our Clients – Brands That Trust Us */}
-        <section id="clients" className="mb-4 md:mb-2 border-t border-white/5 pt-20">
+        <section id="clients" className="mb-4 md:mb-2 border-t border-white/5 pt-10 md:pt-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 gsap-reveal">
             <div>
               <span className="text-primary font-mono text-[11px] uppercase font-bold tracking-[0.2em] mb-3 block">
@@ -2103,7 +2103,7 @@ export default function App() {
      
          {/* BRAND BENEFIT SECTION */}
      
-                 <section id="clients" className="py-14 border-b border-white/5 ">
+                 <section id="clients" className="py-2 border-b border-white/5 ">
     <div className="max-w-[1440px] mx-auto px-12 mb-12 flex items-center gap-6 gsap-reveal">
      {/* <span className="font-mono text-[10px] uppercase font-bold opacity-30 tracking-[0.3em]">
       Industry Partners
@@ -2112,14 +2112,17 @@ export default function App() {
   </div>
 
   <div className="flex whitespace-nowrap overflow-hidden">
-    <div className="client-ticker flex gap-16 items-center py-6">
+    <div className="client-ticker flex gap-16 items-center py-2">
       {[...clients, ...clients].map((client, idx) => (
         <ClientItem key={idx} name={client.name} img={client.img} />
       ))}
     </div>
   </div>
 </section>
- <section className="py-40  border-t border-white/5 relative overflow-hidden">
+
+
+
+ <section className="py-20  border-t border-white/5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] -z-10 rounded-full" />
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-32">
@@ -2233,7 +2236,7 @@ export default function App() {
         </div>
       </section>
 
-              <section className="py-24  border-t border-white/5">
+         <section className="py-9 md:py-7  border-t border-white/5">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-1 gap-8">
 
@@ -2389,7 +2392,7 @@ export default function App() {
       </section>
 
         {/* SEGMENT 7: Awards & Recognition */}
-        <section id="awards" className="mb-24 md:mb-32">
+        <section id="awards" className="mb-12 md:mb-16">
           <div className="bento-card bg-[#0C0616] border-white/10 rounded-[44px] p-8 md:p-14 gsap-reveal">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
               <div>
@@ -2446,7 +2449,7 @@ export default function App() {
         </section>
 
         {/* INSIGHTS: Blogs · News · Updates */}
-        <section id="insights" className="mb-24 md:mb-32 border-t border-white/5 pt-20">
+        <section id="insights" className="mb-12 md:mb-16 border-t border-white/5 pt-10 md:pt-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 gsap-reveal">
             <div>
               <span className="text-primary font-mono text-[11px] uppercase font-bold tracking-[0.2em] mb-3 block">
@@ -2554,7 +2557,7 @@ export default function App() {
       {/* Business Enquiries / Contact Section */}
       <section
         id="contact-form"
-        className="py-24 md:py-32 bg-[#030807] border-t border-white/5 relative overflow-hidden selection:bg-primary selection:text-black"
+        className="py-12 md:py-14 md:py-32 bg-[#030807] border-t border-white/5 relative overflow-hidden selection:bg-primary selection:text-black"
       >
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-12 gap-12 xl:gap-20 items-start">
@@ -2895,13 +2898,13 @@ export default function App() {
 
           <div className="mt-24 opacity-100 select-none overflow-visible pb-[20px] footer-crea8ors-container relative">
             <h6 className="text-[24vw] font-impact font-black leading-none whitespace-nowrap uppercase flex justify-center items-center">
-              <span className="text-white/25 tracking-tighter">crea</span>
+              <span className="text-white/25 tracking-normal">crea</span>
               <span className="footer-eight-hover-wrap inline-block transition-all duration-1000 ease-out group-hover:scale-110">
                 <span className="footer-eight inline-block text-primary italic px-4 relative z-20 origin-center drop-shadow-[0_0_30px_rgba(255,210,0,0.4)]">
                   8
                 </span>
               </span>
-              <span className="text-white/25 tracking-tighter">ors</span>
+              <span className="text-white/25 tracking-normal">ors</span>
             </h6>
           </div>
         </div>
